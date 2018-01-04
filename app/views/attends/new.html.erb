@@ -1,0 +1,15 @@
+<center><h2>Add new Attendee</h2>
+
+<%= form_for @attend do %>
+  <li> First Name: <%= text_field_tag :firstname %></li>
+  <li> Last Name: <%= text_field_tag :lastname %></li>
+  <li> Age: <%= text_field_tag :age %></li>
+  <li> Likes Beer: <%= text_field_tag :likesbeer %></li>
+
+<center> <h2> <%= submit_tag "Add" %> </h2></center>
+
+
+
+<% end %>
+
+</center>

@@ -1,0 +1,31 @@
+<center><h1 style="color:red;"> HAPPY HOURS APP</h1></center>
+
+<img src="HappyHours.png" width="100%" height="600px">
+<br><br><br><br>
+<center>
+<h2> Active member of Happy Hours </h2>
+</center>
+<br><br>
+<hr>
+
+<center style= "color: gray;">
+<% @attend.each do |t| %>
+	<tr>
+	<td>First Name :- <%= t.firstname %></td>
+	<td>Last Name :- <%= t.lastname %></td>
+	</tr>
+	<!-- Age :- <%= t.age %> 
+	Beers Lover :- <%= t.likesbeer %> -->
+	<br><br>
+	<%= link_to "Edit", edit_attend_path(t) %> |
+	<%= link_to "Remove", attend_path(t), method: :delete, data: { confirm: "Are you sure?" } %>
+
+<br>
+<hr>
+
+ <% end %>
+
+</center>
+<br><br>
+
+<center> <h1><%= link_to "Add New Attendee", new_attend_path %> </h1> </center>

@@ -1,0 +1,9 @@
+<%= form_for @attend do %>
+  <li> First Name: <%= text_field_tag :firstname, @attend.firstname %></li>
+  <li> Last Name: <%= text_field_tag :lastname, @attend.lastname %></li>
+  <li> Age: <%= text_field_tag :age, @attend.age %></li>
+  <li> Likes Beer: <%= text_field_tag :likesbeer, @attend.likesbeer %></li>
+ 
+<center> <h2> <%= submit_tag "Delete" %> </h2></center>
+
+<% end %>
